@@ -29,6 +29,7 @@ function FileUploader({
 						onChange(newData);
 					} catch (error) {
 						setErrorMessage('Error parsing JSON data, please check the file.');
+						setMessage('');
 					}
 				}
 			};
