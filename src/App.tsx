@@ -34,9 +34,11 @@ function App() {
 
 	return (
 		<div>
+			{/* input button */}
 			<FileUploader jsonData={jsonData} onChange={handleChange} setErrorMessage={setErrorMessage} setMessage={setMessage} />
 			<div style={{ color: 'red', textAlign: 'center' }}><h1>{errorMessage}</h1></div>
 			<div style={{ textAlign: 'center' }}><h1>{message}</h1></div>
+			{/* json data display and edit */}
 			<JsonEditor data={jsonData} handleUserUpdate={handleUserUpdate} />
 		</div>
 	);

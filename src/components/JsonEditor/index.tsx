@@ -40,6 +40,7 @@ const MemoizedDisplay = React.memo(DataDisplay);
 function DataEdit({
 	property, value, id, handleChange,
 }:DataEditProps) {
+	// rendering component based on the value of the property
 	if (typeof value === 'object') {
 		return <></>;
 	}
@@ -64,6 +65,8 @@ function DataEdit({
 const MemoizedEdit = React.memo(DataEdit);
 
 function Row({ item, handleUserUpdate }:RowProps) {
+	// display and edit component
+	// id,customCreatedId and object will be ignored by editor
 	const keys = Object.keys(item);
 
 	const handleChange = React.useCallback((property:string, value:string | number | boolean) => {
